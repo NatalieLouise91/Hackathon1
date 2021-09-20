@@ -26,15 +26,18 @@
 
   </head>
   <body>
+    
     <!-- main container -->
     <div id= "container">
       <h1 class="display-5 fw-bold text-center">Trivia Master</h1>
-      <h3 class="fw-bold text-center">Generate a list of Questions and Answers!</h3>
+      <span class="material-icons-outlined kahoot star">star</span>
+
+      <h3 class="fw-bold text-center">Generate a list of Questions and Answers!</h3></br>
       <div id= "trivia-selection">
         <!-- information for level of difficulty, number of questions, category -->
         
         <!-- Choose questions dropdown menu -->
-        <div class ="numquest">
+        <div class ="centerflex">
           <label for="number" class="fw-bold text-center h4">Number of Questions:</label>
           <select name="number" id="number" class="form-select">
             <option value="1">1</option>
@@ -49,29 +52,36 @@
             <option value="10">10</option>
           </select>
         </div>
-        </br>
+      </br>
 
         <!-- Select category dropdown menu -->
-        <label for="category">Select category:</label>
-        <select name="category" id="category">
-          <option value="General Knowledge">General Knowledge</option>
-          <option value="Entertainment: Film">Entertainment: Film</option>
-          <option value="Entertainment: Music">Entertainment: Music</option>
-          <option value="Entertainment: Television">Entertainment: Television</option>
-          <option value="Entertainment: Video Games">Entertainment: Video Games</option>
-        </select>
-        </br> 
+        <div class="centerflex">
+          <label for="category" class="fw-bold text-center h4">Select Category:</label>
+          <select name="category" id="category" class="form-select">
+            <option value="General Knowledge">General Knowledge</option>
+            <option value="Entertainment: Film">Entertainment: Film</option>
+            <option value="Entertainment: Music">Entertainment: Music</option>
+            <option value="Entertainment: Television">Entertainment: Television</option>
+            <option value="Entertainment: Video Games">Entertainment: Video Games</option>
+          </select>
+        </div>
+      </br> 
         <!-- Choose difficulty dropdown menu -->
-        <label for="difficulty">Choose the difficulty:</label>
-        <select name="difficulty" id="difficulty">
-          <option value="easy">easy</option>
-          <option value="medium">medium</option>
-          <option value="hard">hard</option>
-        </select>
+        <div class="centerflex">
+          <label for="difficulty" class="fw-bold text-center h4">Select Difficulty:</label>
+          <select name="difficulty" id="difficulty" class="form-select">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+      </br>
 
         <!-- generate button -->
-        <button id="get-question">GENERATE!</button>
-      </div>
+        <div class="centerflex">
+          <button id="get-question" class="fw-bold btn btn-primary btn-lg">GENERATE!</button>
+        </div>
+      </div></br>
 
       <!-- <audio
         src="https://www.youtube.com/watch?v=hnnUD9-hD8A&ab_channel=RedHyena"
@@ -86,7 +96,21 @@
           <!-- container for answers -->
         </div> 
       </div>
-    </div>  
+
+      <div class="about">
+      </br>
+      <span class="material-icons-outlined kahoot fire">auto_awesome</span>                
+      <h1 class="display-5 fw-bold text-center">About Us</h1>
+        <div class="namelist">
+          <ul class="h3 fw-bold">Adriana Heesh</ul>
+          <ul class="h3 fw-bold">Ben Aitcheson</ul>
+          <ul class="h3 fw-bold">Jack Kirkwood</ul>
+          <ul class="h3 fw-bold">Natalie Bottema</ul>
+          <ul class="h3 fw-bold">Walter Pham</ul>
+        </div>
+      </div>
+
+ 
 
   <!-- Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
