@@ -1,11 +1,14 @@
-// new js file
 let questions = document.getElementById('get-question')
 let questionsDiv = document.getElementById('questions')
 
-// Adding in user options here
-
 questions.addEventListener('click', () => {
-    fetch('https://opentdb.com/api.php?amount=10')
+    category_list = {"General Knowledge": 9,"Entertainment: Film": 11, "Entertainment: Music": 12,"Entertainment: Television": 14, "Entertainment: Video Games": 15 }
+    //grabs the values of user drop down
+    number = document.getElementById("number")
+    category = document.getElementById("category")
+    difficulty = document.getElementById("difficulty")
+    
+    fetch(`https://opentdb.com/api.php?amount=${number}&category=${category_list[category]}&difficulty=${difficulty}`)
     .then(res => res.json())
     .then(data => {
         questionsDiv.innerHTML += `<p> Question: ${data.results[0].question} </p>`
@@ -16,3 +19,11 @@ questions.addEventListener('click', () => {
     // changed button text to regenerate after click
     questions.innerText = "REGENERATE!"
 })
+
+
+window.addEventListener("DOMContentLoaded", event => {
+    const audio = document.querySelector("audio");
+    audio.volume = 0.2;
+    audio.play();
+  });
+
