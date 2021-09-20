@@ -1,8 +1,9 @@
 function display(data){
     for (element of data.results){
-        questionsDiv.innerHTML += `<p> Question: ${element.question} </p>`
-        questionsDiv.innerHTML += `<p> Correct Answer: ${element.correct_answer} </p>`
-        questionsDiv.innerHTML += `<p> Incorrect Answers: ${element.incorrect_answers} </p>`
+        questionsDiv.innerHTML += `<h6 class="quizquestion"> Question: ${element.question} </h6>`
+        questionsDiv.innerHTML += `<h6 class="quizcorrect"> Correct Answer: ${element.correct_answer} </h6>`
+        // questionsDiv.innerHTML += `<h5 class="quizwrong"> Incorrect Answers: ${element.incorrect_answers} </h5>`
+        questionsDiv.style.color = "white";
     }   
 }
 
@@ -10,8 +11,17 @@ function clearDiv(elementID) {
     document.getElementById(elementID).innerHTML = "";
 }
 
+// Generate Button
 let questions = document.getElementById('get-question')
+
+// Questions Container
 let questionsDiv = document.getElementById('questions')
+// Questions Style
+questionsDiv.style.paddingLeft = "30px"
+questionsDiv.style.display = "grid";
+questionsDiv.style.gridTemplateColumns = "auto auto";
+questionsDiv.style.backgroundColor ="#25076B";
+// questionsDiv.style.textAlign = "right"
 
 questions.addEventListener('click', event => {
     event.preventDefault()
