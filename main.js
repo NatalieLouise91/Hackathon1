@@ -1,5 +1,13 @@
 // new js file
-let questionsDiv = document.getElementById('questions')
+let questions = document.getElementById('get-question')
 
-fetch('https://opentdb.com/api.php?amount=10')
-.then(res => res.json())
+questions.addEventListener('click', () => {
+    fetch('https://opentdb.com/api.php?amount=10')
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+    })
+})
+
+
+
