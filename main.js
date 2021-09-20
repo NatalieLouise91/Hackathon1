@@ -1,6 +1,8 @@
 // new js file
 let questions = document.getElementById('get-question')
 
+// Adding in user options here
+
 questions.addEventListener('click', () => {
     fetch('https://opentdb.com/api.php?amount=10')
     .then(res => res.json())
