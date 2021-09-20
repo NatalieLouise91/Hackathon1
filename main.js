@@ -1,3 +1,12 @@
+function display(data){
+    for (element of data.results){
+        questionsDiv.innerHTML += `<p> Question: ${element.question} </p>`
+        questionsDiv.innerHTML += `<p> Correct Answer: ${element.correct_answer} </p>`
+        questionsDiv.innerHTML += `<p> Incorrect Answers: ${element.incorrect_answers} </p>`
+    }
+    
+}
+
 let questions = document.getElementById('get-question')
 let questionsDiv = document.getElementById('questions')
 
@@ -11,11 +20,7 @@ questions.addEventListener('click', () => {
     
     fetch(`https://opentdb.com/api.php?amount=${number}&category=${category_list[category]}&difficulty=${difficulty}`)
     .then(res => res.json())
-    .then(data => {
-        questionsDiv.innerHTML += `<p> Question: ${data.results[0].question} </p>`
-        questionsDiv.innerHTML += `<p> Correct Answer: ${data.results[0].correct_answer} </p>`
-        questionsDiv.innerHTML += `<p> Incorrect Answers: ${data.results[0].incorrect_answers} </p>`
-        console.log(data)
+    .then(data => {display(data)
     })
     // changed button text to regenerate after click
     questions.innerText = "REGENERATE!"
