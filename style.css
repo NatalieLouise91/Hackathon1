@@ -1,15 +1,41 @@
+/* font-family: 'Hind', sans-serif;
+font-family: 'Montserrat', sans-serif; */
+
+
+html {
+    background-color: #25076B;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     }
 
+#id {
+    background-color: red;
+}
+
 #container {
-    background-color: rgba(0, 0, 0, 0.048);
-    color: red;
+    padding: 10px;
+    background-color: #25076B;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
     border: 1px solid red;
 }
 
 #QandA-container {
     border: 5px solid red;
+}
+
+.numquest {
+    justify-content: center;
+    display: flex;
+}
+.form-select{
+    margin-left: 30px;
+    width: 30%;
+    background-color: #9D5EFE;
+    color: white;
+    font-weight: bold;
 }

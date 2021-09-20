@@ -3,6 +3,7 @@ function display(data){
         questionsDiv.innerHTML += `<p> Question: ${element.question} </p>`
         questionsDiv.innerHTML += `<p> Correct Answer: ${element.correct_answer} </p>`
         questionsDiv.innerHTML += `<p> Incorrect Answers: ${element.incorrect_answers} </p>`
+        questionsDiv.style.color = "white";
     }   
 }
 
@@ -10,8 +11,12 @@ function clearDiv(elementID) {
     document.getElementById(elementID).innerHTML = "";
 }
 
+// Generate Button
 let questions = document.getElementById('get-question')
+
+// Questions Container
 let questionsDiv = document.getElementById('questions')
+questionsDiv.style.backgroundColor ="#25076B";
 
 questions.addEventListener('click', event => {
     event.preventDefault()
