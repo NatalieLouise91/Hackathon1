@@ -4,9 +4,10 @@ let questionsDiv = document.getElementById('questions')
 questions.addEventListener('click', () => {
     category_list = {"General Knowledge": 9,"Entertainment: Film": 11, "Entertainment: Music": 12,"Entertainment: Television": 14, "Entertainment: Video Games": 15 }
     //grabs the values of user drop down
-    number = document.getElementById("number")
-    category = document.getElementById("category")
-    difficulty = document.getElementById("difficulty")
+
+    number = document.getElementById("number").value
+    category = document.getElementById("category").value
+    difficulty = document.getElementById("difficulty").value
     
     fetch(`https://opentdb.com/api.php?amount=${number}&category=${category_list[category]}&difficulty=${difficulty}`)
     .then(res => res.json())
