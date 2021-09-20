@@ -13,4 +13,6 @@ questions.addEventListener('click', () => {
         questionsDiv.innerHTML += `<p> Incorrect Answers: ${data.results[0].incorrect_answers} </p>`
         console.log(data)
     })
+    // changed button text to regenerate after click
+    questions.innerText = "REGENERATE!"
 })
