@@ -1,8 +1,12 @@
 function display(data){
+    questionsDiv.innerHTML += `<h4 class="quizquestion quiztitle"> Question:</h5>`
+    questionsDiv.innerHTML += `<h4 class="quizquestion quiztitle"> Correct Answer:</h5>`
+    questionsDiv.innerHTML += `<h4 class="quizquestion quiztitle"> Incorrect Answers:</h5>`
+
     for (element of data.results){
-        questionsDiv.innerHTML += `<h6 class="quizquestion"> Question: ${element.question} </h6>`
-        questionsDiv.innerHTML += `<h6 class="quizcorrect"> Correct Answer: ${element.correct_answer} </h6>`
-        // questionsDiv.innerHTML += `<h5 class="quizwrong"> Incorrect Answers: ${element.incorrect_answers} </h5>`
+        questionsDiv.innerHTML += `<h6 class="quizquestion"> ${element.question} </h6>`
+        questionsDiv.innerHTML += `<h6 class="quizcorrect">${element.correct_answer} </h6>`
+        questionsDiv.innerHTML += `<h6 class="quizwrong">${element.incorrect_answers} </h6>`
         questionsDiv.style.color = "white";
     }   
 }
@@ -19,7 +23,7 @@ let questionsDiv = document.getElementById('questions')
 // Questions Style
 questionsDiv.style.paddingLeft = "30px"
 questionsDiv.style.display = "grid";
-questionsDiv.style.gridTemplateColumns = "auto auto";
+questionsDiv.style.gridTemplateColumns = "2fr 1fr 1fr";
 questionsDiv.style.backgroundColor ="#25076B";
 // questionsDiv.style.textAlign = "right"
 

@@ -45,7 +45,12 @@ html {
     z-index: 1;
 }
 .quizwrong{
-    color: rgb(185, 44, 44);
+    color: rgb(255, 41, 41);
+    z-index: 1;
+
+}
+.quiztitle{
+    text-decoration: underline;
 }
 .about{
     background-color: #25076B;
@@ -69,3 +74,22 @@ html {
     left: 800px;
     top: 300px;
 }
+.blurb{
+    z-index: 1;
+    position: relative;
+    padding: 20px 50px;
+    text-align: center;
+}
+.namelist{
+    text-align: center;
+    padding: 10px 50px 30px;
+
+}
+a:link, a:visited {
+    color: white;
+    text-align: center;
+   }
+  
+  a:hover, a:active {
+    color: #9D5EFE;
+  }
