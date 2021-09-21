@@ -4,7 +4,10 @@ font-family: 'Montserrat', sans-serif; */
 html {
     background-color: #25076B;
 }
-
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 * {
     margin: 0;
     padding: 0;
@@ -18,6 +21,7 @@ html {
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
+
 .centerflex {
     justify-content: center;
     display: flex;
@@ -30,11 +34,15 @@ html {
     font-weight: bold;
     box-shadow: 8px 9px 8px rgba(0, 0, 0, 0.25);
 }
+.over{
+    z-index: 1;
+}
 .btn {
     border-radius: 50px;
     border: 4px solid white;
     background-color: #9D5EFE;
     box-shadow: 8px 9px 8px rgba(0, 0, 0, 0.25);
+    z-index: 1;
 }
 .quizquestion{
     color: white;
@@ -73,11 +81,14 @@ html {
     left: -200px;
     top: -100px;
     font-size: 500px;
+
 }
 .fire{
     font-size:  300px !important;
     left: 800px;
     top: 300px;
+
+
 }
 .blurb{
     z-index: 1;
