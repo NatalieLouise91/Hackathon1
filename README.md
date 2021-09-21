@@ -20,6 +20,10 @@ This application utilises information from Trivia API sourced from the open Triv
 - CSS
 - Bootstrap
 
+## Link to Deployed Application
+
+https://natalielouise91.github.io/Hackathon1/
+
 ## List of Contributors 
 
 <a href="https://github.com/adrianaheesh">Adriana Heesh 🦩</a>
